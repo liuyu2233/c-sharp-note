@@ -1,0 +1,48 @@
+```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> list = new List<string>() {"a","b" };
+            list.Add("c");
+            foreach (string str in list)
+            {
+              Console.WriteLine(str);
+            }
+
+            list.Add("d");
+            Console.WriteLine(list[3]);
+
+            Console.ReadKey();
+        }
+    }
+}
+```
+
+追加说明
+*列表的容量不够时会自动扩大，向空列表追加元素，扩大为4，追加第五个时，扩大为8.
+*指定固定长度时，容量不够会自动扩大为原来的2倍     
+    List<int> intlist = new List<int>(10);             
+    inlist.Capacity;   可以获取列表容量                    
+    intlist.Count; 可以取得元素数
+*好用的写法
+
+Class MartialArtsMaster {
+    public int Id {get; set;}
+    public String Name {get; set;}
+    public String Age {get; set;}
+}
+
+ var masterList = new List<MartialArtsMaster>()
+ {
+    new MartialArtsMaster(){Id = 1, Name = "杨过", Age = "18"},
+    new MartialArtsMaster(){Id = 2, Name = "郭靖", Age = "18"}
+ }
